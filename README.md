@@ -9,7 +9,6 @@ Use docker-compose to declare the environment variables and start the containers
 
 First, edit `docker-compose.yml`:
 ```
-# http://docs.docker.com/compose/yml/
 web:
   image: jsonnull/wp-lemh
   links:
