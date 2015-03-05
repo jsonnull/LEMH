@@ -8,6 +8,7 @@ Wordpress on LEMH deployed to a 512mb DigitalOcean droplet serves pages scary fa
 Use docker-compose to declare the environment variables and start the containers.
 
 First, edit `docker-compose.yml`:
+
 ```
 web:
   image: jsonnull/wp-lemh
