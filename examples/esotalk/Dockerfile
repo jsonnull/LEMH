@@ -1,4 +1,4 @@
-FROM jsonnull/lemhpress
+FROM jsonnull/lemhpress:0.1.0
 MAINTAINER Jason Nall <jsonnull@gmail.com>
 
 RUN apt-get update && \
