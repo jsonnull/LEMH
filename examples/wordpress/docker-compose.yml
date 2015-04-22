@@ -1,0 +1,28 @@
+data:
+  image: cogniteev/echo
+  volumes:
+   - /var/www
+   - /var/lib/mysql
+
+db:
+  image: mariadb:latest
+  ports:
+   - "3306:3306"
+  volumes_from:
+   - data
+  environment:
+   - MYSQL_ROOT_PASSWORD=test
+   - MYSQL_DATABASE=wordpress
+
+web:
+  build: .
+  links:
+   - db
+  ports:
+   - "80:80"
+  volumes_from:
+   - data
+  environment:
+   - DB_USER=root
+   - DB_PASSWORD=test
+   - DB_NAME=wordpress
