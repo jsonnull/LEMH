@@ -1,5 +1,5 @@
-# Wordpress on nginx + HHVM + MySQL
-wp-lemh is a docker build that makes it easy to spin up a blazing fast Wordpress deployment using the LEMH stack.
+# Linex + nginx + MySQL + HHVM
+lemhpress is a docker build that makes it easy to spin up a blazing fast LEMH stack for almost any modern PHP application.
 
 Wordpress on LEMH deployed to a 512mb DigitalOcean droplet serves pages scary fast and has a low memory footprint.
 
@@ -11,7 +11,7 @@ First, edit `docker-compose.yml`:
 
 ```
 web:
-  image: jsonnull/wp-lemh
+  image: jsonnull/lemhpress
   links:
    - db
   ports:
@@ -41,9 +41,3 @@ Just run two containers with docker.
 docker run -d --name db_1 -e "MYSQL_DATABASE=wordpress" -e "MYSQL_ROOT_PASSWORD=test" -p 3306:3306 mariadb:10.1.2
 docker run -d --name web_1 --link db_1:db_1 -e "DB_USER=root" -e "DB_PASSWORD=test" -p 80:80 jsonnull/wp-lemh
 ```
-
----
-
-## What's next?
-
-Over time I will update this with tutorials on developing with Wordpress in a containerized LEMH stack like this one.
