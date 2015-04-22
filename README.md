@@ -10,21 +10,30 @@ Use docker-compose to declare the environment variables and start the containers
 First, edit `docker-compose.yml`:
 
 ```
+data:
+  image: cogniteev/echo
+  volumes:
+   - /var/www
+
 web:
   image: jsonnull/lemhpress
   links:
    - db
   ports:
    - "80:80"
+  volumes_from:
+   - data
   environment:
    - DB_USER=root
    - DB_PASSWORD=test
    - DB_NAME=wordpress
    
 db:
-  image: mariadb:10.1.2
+  image: mariadb:latest
   ports:
    - "3306:3306"
+  volumes_from:
+   - data
   environment:
    - MYSQL_ROOT_PASSWORD=test
    - MYSQL_DATABASE=wordpress
