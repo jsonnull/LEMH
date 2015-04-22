@@ -1,4 +1,4 @@
-# Linex + nginx + MySQL + HHVM
+# Linux + nginx + MySQL + HHVM
 lemhpress is a docker build that makes it easy to spin up a blazing fast LEMH stack for almost any modern PHP application.
 
 Wordpress on LEMH deployed to a 512mb DigitalOcean droplet serves pages scary fast and has a low memory footprint.
@@ -20,6 +20,7 @@ web:
    - DB_USER=root
    - DB_PASSWORD=test
    - DB_NAME=wordpress
+   
 db:
   image: mariadb:10.1.2
   ports:
