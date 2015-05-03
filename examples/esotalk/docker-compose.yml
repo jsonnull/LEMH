@@ -1,7 +1,7 @@
 data:
   image: cogniteev/echo
   volumes:
-   - /var/www
+   - /var/www/config
    - /var/lib/mysql
 
 db:
@@ -12,6 +12,8 @@ db:
    - data
   environment:
    - MYSQL_ROOT_PASSWORD=test
+   - MYSQL_USER=esotalk
+   - MYSQL_PASSWORD=test
    - MYSQL_DATABASE=esotalk
 
 web:
@@ -23,6 +25,6 @@ web:
   volumes_from:
    - data
   environment:
-   - DB_USER=root
+   - DB_USER=esotalk
    - DB_PASSWORD=test
    - DB_NAME=esotalk
