@@ -12,8 +12,10 @@ RUN cd /var/www && \
 
 # Install plugins
 RUN cd /var/www/addons/plugins && \
+    rm -r SMTP && \
     git clone https://github.com/esotalk/Views.git && \
     git clone https://github.com/esotalk/GoogleAnalytics.git && \
-    git clone https://github.com/tvb/reCAPTCHA.git
+    git clone https://github.com/tvb/reCAPTCHA.git && \
+    git clone https://github.com/jsonnull/esotalkMandrill.git
 
 CMD /usr/bin/supervisord
