@@ -32,6 +32,8 @@ db:
    - data
   environment:
    - MYSQL_ROOT_PASSWORD=test
+   - MYSQL_USER=app
+   - MYSQL_PASSWORD=test
    - MYSQL_DATABASE=myapp
 
 web:
@@ -43,7 +45,7 @@ web:
   volumes_from:
    - data
   environment:
-   - DB_USER=root
+   - DB_USER=app
    - DB_PASSWORD=test
    - DB_NAME=myapp
 ```
