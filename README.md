@@ -1,7 +1,7 @@
 # Linux + nginx + MySQL + HHVM
-**Lemhpress is a docker image that makes it easy to spin up a modern LEMH stack for PHP applications.** Wordpress on LEMH deployed to a 512mb DigitalOcean droplet serves pages scary fast and has a low memory footprint.
+**jsonnull/lemh is docker image that makes it easy to spin up a modern LEMH stack for PHP applications.** Wordpress on LEMH deployed to a 512mb DigitalOcean droplet serves pages scary fast and has a low memory footprint.
 
-In addition, the repository is home to several supported configurations for PHP applications running on lemhpress.
+This repository is home to the docker image as well as several supported configurations for PHP applications running on LEMH.
 
 App | Purpose | Version
 ----|---------|--------
@@ -65,5 +65,5 @@ docker run -d --name web_1 --link db_1:db_1 -e "DB_USER=root" -e "DB_PASSWORD=te
 
 Want to know what to help on? Here are some things I have in mind for this project:
 
- - Maintain configurations for a number of PHP applications. Configurations are pinned to a specific tag of the lemhpress image, so the base image can progress without breaking existing applications, and the applications can migrate to newer images at their own pace.
+ - Maintain configurations for a number of PHP applications. Configurations are pinned to a specific tag of the LEMH image, so the base image can progress without breaking existing applications, and the applications can migrate to newer images at their own pace.
  - Better configuration management—right now nginx and hhvm configurations are baked into the base image with no support for configuration of basic options via environment variables. Also, examples could show application-specific customization for nginx and HHVM if necessary.
