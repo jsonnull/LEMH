@@ -1,5 +1,5 @@
 # Linux + nginx + MySQL + HHVM
-**jsonnull/lemh is docker image that makes it easy to spin up a modern LEMH stack for PHP applications.** Wordpress on LEMH deployed to a 512mb DigitalOcean droplet serves pages scary fast and has a low memory footprint.
+**jsonnull/LEMH is a docker image that makes it easy to spin up a modern LEMH stack for PHP applications.** A 512mb DigitalOcean droplet _easily_ handles minimal deployments of applications like Wordpress and esoTalk—LEMH serves pages scary fast and has a low memory footprint.
 
 This repository is home to the docker image as well as several supported configurations for PHP applications running on LEMH.
 
